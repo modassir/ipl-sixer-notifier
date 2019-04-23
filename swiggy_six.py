@@ -20,9 +20,8 @@ def main():
 
 		innings = score["batting"]["innings"][0]
 
-		print (innings)
-
 		if innings["overs"] != over:
+			print (innings)
 			over = innings["overs"]
 			prev_overs = score["prev_overs"].strip()
 			last_ball = prev_overs[-1]
@@ -30,7 +29,7 @@ def main():
 				print ("Hurray SIX! at " + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
 				print ('\a')
 
-		time.sleep(20)
+		time.sleep(10)
 
 if __name__ == '__main__':
 	main()
